@@ -1,0 +1,316 @@
+
+/* Pengaturan dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8fafc;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header halaman */
+.navbar {
+    background-color: #212529;
+    color: white;
+    padding: 20px 4vw;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.navbar h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.navbar p {
+    color: #adb5bd;
+    font-size: 14px;
+}
+
+/* Kontainer utama */
+.container {
+    width: 92%;
+    max-width: 100%;
+    margin: 35px auto;
+}
+
+/* Kotak daftar donatur */
+.table-container {
+    background-color: #FFFFFF;
+    padding: 28px;
+    border: 1px solid #E8EDF5;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(15, 23, 42, 0.05);
+    overflow-x: auto;
+}
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 24px;
+}
+
+.table-header h2 {
+    color: #172554;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+/* Tabel */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: white;
+    border: 1px solid #E2E8F0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th {
+    background-color: #EFF6FF;
+    color: #1E40AF;
+    text-align: left;
+    padding: 15px 14px;
+    font-size: 13px;
+    font-weight: 700;
+    border-bottom: 1px solid #DCE7F5;
+    white-space: nowrap;
+}
+
+td {
+    padding: 15px 14px;
+    font-size: 14px;
+    border-bottom: 1px solid #EDF1F7;
+    vertical-align: middle;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #FAFBFE;
+}
+
+tbody tr:hover {
+    background-color: #F0F6FF;
+    transition: background-color 0.2s ease;
+}
+
+/* Semua tombol */
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background-color 0.2s ease,
+                transform 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+}
+
+/* Tombol tambah */
+.btn-primary {
+    background-color: #2563EB;
+    color: white;
+    box-shadow: 0 3px 8px rgba(37, 99, 235, 0.15);
+}
+
+.btn-primary:hover {
+    background-color: #1D4ED8;
+}
+
+/* Tombol edit */
+.btn-edit {
+    background-color: #DBEAFE;
+    color: #1D4ED8;
+}
+
+.btn-edit:hover {
+    background-color: #BFDBFE;
+}
+
+/* Tombol hapus */
+.btn-delete {
+    background-color: #FEE2E2;
+    color: #B91C1C;
+}
+
+.btn-delete:hover {
+    background-color: #FECACA;
+}
+
+/* Tombol simpan */
+.btn-green {
+    background-color: #16A34A;
+    color: white;
+}
+
+.btn-green:hover {
+    background-color: #15803D;
+}
+
+/* Tombol kembali */
+.btn-secondary {
+    background-color: #E2E8F0;
+    color: #334155;
+}
+
+.btn-secondary:hover {
+    background-color: #CBD5E1;
+}
+
+/* Form tambah dan edit */
+.form-container {
+    width: 90%;
+    max-width: 650px;
+    margin: 35px auto;
+    padding: 32px;
+    background-color: white;
+    border: 1px solid #E8EDF5;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(15, 23, 42, 0.05);
+}
+
+.form-container h2 {
+    color: #172554;
+    font-size: 23px;
+    margin-bottom: 8px;
+}
+
+.form-description {
+    color: #64748B;
+    font-size: 14px;
+    margin-bottom: 28px;
+}
+
+/* Input form */
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #334155;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #CBD5E1;
+    border-radius: 8px;
+    background-color: #FFFFFF;
+    color: #334155;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    transition: border-color 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #3B82F6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.12);
+}
+
+/* Tombol di bawah form */
+.form-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+/* Pesan error */
+.error {
+    color: #DC2626;
+    font-size: 13px;
+    margin-top: 6px;
+}
+
+.alert-error {
+    padding: 14px 16px;
+    margin-bottom: 22px;
+    color: #B91C1C;
+    background-color: #FEF2F2;
+    border: 1px solid #FECACA;
+    border-radius: 8px;
+}
+
+/* Penanda status tampil atau anonim */
+.badge-public {
+    display: inline-block;
+    padding: 5px 11px;
+    background-color: #DCFCE7;
+    color: #15803D;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.badge-anonim {
+    display: inline-block;
+    padding: 5px 11px;
+    background-color: #F1F5F9;
+    color: #475569;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* Tampilan HP */
+@media (max-width: 700px) {
+    .navbar {
+        padding: 20px 4vw;
+    }
+
+    .navbar h1 {
+        font-size: 24px;
+    }
+
+    .container {
+        width: 92%;
+        margin: 22px auto;
+    }
+
+    .table-container {
+        padding: 18px;
+        border-radius: 12px;
+    }
+
+    .table-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    table {
+        min-width: 750px;
+    }
+
+    .form-container {
+        width: 94%;
+        padding: 22px;
+        border-radius: 12px;
+    }
+}
